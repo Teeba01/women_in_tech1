@@ -1,0 +1,599 @@
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+.padding-top{
+    padding-top: 100px; 
+    padding-bottom: 50px; 
+}
+/* General */
+
+
+
+
+
+
+/* Nav_Bar */
+.background{
+    background: url('./back1.png');
+    width: 100%;
+    height: 750px;
+    background-size: cover;
+    background-position: center;
+}
+.Nav_Bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+}
+.logo img{
+    width: 200px;
+}
+.menu ul{
+    display: flex;
+    gap: 60px;
+}
+.menu ul li a{
+    font-size: 22px;
+    color: black;
+    position: relative; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.menu ul li a:hover {
+    color: #BD58AE; 
+    transform: translateY(-5px); 
+}
+.menu ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #BD58AE; 
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.menu ul li a:hover::before {
+    visibility: visible;
+    width: 100%; 
+}
+.Register ul{
+    display: flex;
+    gap: 15px;
+}
+.Register ul li a{
+    font-size: 20px;
+    color: black;
+    transition: color 0.3s ease;
+}
+.Register ul li a:hover {
+    color: #BD58AE; 
+}
+.menu li i{
+    margin-left: 10px;
+}
+
+
+/* القائمة الرئيسية */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px; /* تقليل المسافة بين العناصر */
+}
+
+.menu ul li {
+    position: relative; /* ضروري لعرض القائمة المنسدلة بشكل صحيح */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #BD58AE; /* تغيير لون النص عند التمرير */
+}
+
+
+
+
+/* dashboard*/
+.menu .dropdown ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    gap: 1px; 
+}
+
+.menu .dropdown ul li {
+    position: relative; 
+}
+
+.menu .dropdown ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #333;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.menu .dropdown ul li a:hover {
+    color: #000000;
+}
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; /* تظهر أسفل عنصر القائمة */
+    background-color: #eceaea; 
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* لضمان الظهور فوق العناصر الأخرى */
+    width: 160px; 
+    flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+    opacity: 0; /* بدايةً، تكون غير مرئية */
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 1px; /* تقليل المسافة الداخلية */
+    display: block;
+    font-size: 8px; /* تصغير حجم الكتابة */
+    transition: color 0.3s;
+}
+
+/* إظهار القائمة المنسدلة عند التمرير */
+.dropdown:hover .dropdown-menu {
+    display: flex; 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+/* dashboard*/
+
+
+
+.border {
+    border-bottom: 2px solid #bd58ae74; 
+    border-radius: 100px; 
+    padding-bottom: 10px; 
+    padding: 10px;
+    background: #bd58ae11;
+}
+.under_line{
+    border-bottom: 2px solid rgb(72, 67, 67);
+}
+/* Nav_Bar */
+
+
+
+
+
+
+/* Content */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 200px;
+    align-items: start; /* use to button beacauseits dont work with container  max-width*/
+    height: 100%;
+}
+
+.content h1{
+    font-size: 60px;
+}
+.highlight {
+    color: #BD58AE; 
+}
+.content button {
+    font-size: 20px;
+    border-bottom: 2px solid #BD58AE;
+    border-radius: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #BD58AE;
+    color: #fff;
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.content button:hover {
+    background-color: #A74691; 
+}
+
+.content button:active {
+    transform: scale(0.95);
+}
+/* Content */
+
+
+
+
+/* steps */
+.steps-title {
+    transform: scale(0.9); /* تغيير القيمة حسب الحجم المطلوب */
+    transform-origin: top; /* تعديل نقطة الأصل إذا لزم الأمر */
+}
+
+.steps-title{
+    padding-top: 70px;
+}
+.steps-title h1{
+    text-align: center;
+    padding-top: 5%;
+    font-size: 35px;
+    color: #000000;
+}
+.steps-title .steps{
+    display: flex;
+    justify-content:center;
+    text-align:center ;
+    justify-content: space-between;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.steps-title .steps .step{
+    width: 350px; 
+    height: 290px; 
+    border-radius: 20%; 
+    background-color: #f4f1f1; 
+    box-shadow: 0 5px 25px rgb(181, 173, 171);
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.steps-title .steps .step:hover {
+    transform: translateY(-7px); 
+}
+.step .icon img{
+    width: 20%;
+    height: 20%;
+    margin-top: -40px;
+}
+.step h2{
+    padding: 5%;
+}
+.text{
+    margin-bottom: 8%;
+}
+.step p{
+    padding: 5%;
+    font-size: 1rem;
+    color: #646060;
+    line-height: 1.6;
+    
+}
+
+/* steps */
+
+
+
+/* benefits of the Program */
+.benefits-section{
+    transform: scale(0.9); /* تغيير القيمة حسب الحجم المطلوب */
+    transform-origin: top; /* تعديل نقطة الأصل إذا لزم الأمر */
+}
+.benefits-section{
+    display: flex;
+    gap: 500px;
+    padding-top: 150px;
+
+}
+.img-benefets {
+    width: 20%;
+}
+.img-benefets img{
+    width: 40rem;
+    border-radius: 200px;
+}
+
+.benefits-section .benefits{
+    padding-bottom: 15%;
+
+}
+.list-benefits{
+    line-height: 2;
+}
+.benefit-title{
+    font-size: 36px;
+}
+.list-benefits li i {
+    margin-right: 8px;
+    color: #BD58AE;
+}
+.list-benefits li {
+    font-size: 18px;
+}
+
+.benefits {
+    padding-top: 70px; 
+    
+}
+
+.benefits h1 {
+    margin-bottom: 25px;
+    font-weight:bolder;
+}
+/* benefits of the Program */
+
+
+
+/* the Path that suit you */
+.choosen-paths {
+    transform: scale(0.9); /* تعديل الحجم */
+    transform-origin: top;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.paths-section {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+
+.paths-section i {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #BD58AE;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.paths-section i:hover {
+    background-color: #A74691;
+}
+
+.paths-section i:active {
+    transform: scale(0.95);
+}
+
+.path {
+    border-radius: 5%;
+    background-color: #f4f1f1;
+    width: 320px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* يجعل النصوص والصور في الوسط أفقياً */
+    justify-content: center; /* يجعل المحتوى في الوسط عمودياً */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 5px 25px rgb(181, 173, 171);
+    
+}
+.path img {
+    width: 115%;
+    height: 75%;
+    transform: translateY(-40px); /* رفع الصورة بمقدار 20 بكسل */
+}
+
+
+.skill-gained {
+    border-radius: 30px;
+    background-color: #f4f1f1;
+    width: 1060px;
+    height: 10rem;
+    text-align: left;
+    padding-left: 6%;
+    line-height: 2;
+    box-shadow: 0 5px 25px rgb(181, 173, 171);
+    
+}
+
+.list-skill-gained ul li i {
+    padding-left: 10px;
+    margin-right: 10px;
+    color: #BD58AE;
+}
+
+.list-skill-gained ul li {
+    font-size: 18px;
+}
+
+.choosen-paths .Find-the-Path {
+    padding-bottom: 2%;
+}
+
+.choosen-paths .group-d-container {
+    color: #000000;
+    background-color: #e7e5e5;
+    padding-bottom: 6%;
+    padding-top: 2%;
+}
+
+.choosen-paths .group-d {
+    margin-bottom: 2%;
+    color: #BD58AE;
+}
+
+.group-d {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.Find-the-Path {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.centered-button {
+    border-radius: 30px;
+    background-color: #BD58AE;
+    font-size: 23px;
+    border: none;
+    text-align: center;
+    padding: 15px 35px;
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+.centered-button:hover {
+    background-color: #A74691; 
+}
+
+.centered-button:active {
+    transform: scale(0.95);
+}
+
+
+/* the Path that suit you */
+
+
+
+
+
+/* statistics */
+.statistics {
+    display: flex;
+    gap:3%;
+    justify-content: center;
+    padding-top: 150px;
+}
+.statistics .active{
+    border-radius: 10%;
+    background-color: #e7e5e5;
+    padding: 15px 35px;
+    width: 220px;
+    height: 150px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.statistics  .active:hover {
+    transform: translateY(-7px); 
+}
+.statistics .active img{
+    margin-top: -90px;
+    padding-left: 25%;
+}
+.statistics .active h1{
+    text-align: center;
+    padding-top: 10%;
+    font-size: 20px;
+}
+.statistics .active .num{
+    color: #BD58AE;
+    font-size: 28px;
+}
+/* statistics */
+
+
+
+
+/* feadback*/
+.feadback-sections-p{
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+.feadback-sections-h1{
+    padding-top: 100px;
+    font-size: 36px;
+    font-weight: bold;
+}
+.feadback-sections{
+    text-align: center;
+}
+.feadback{
+    display: flex;
+    gap:50px;
+    justify-content: center;
+}
+.section{
+    border-radius: 10%;
+    width: 250px;
+    height: auto;
+    background-color: #f4f1f1;
+    padding: 15px 35px;
+    position: relative;
+    box-shadow: 0 5px 25px rgb(181, 173, 171);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.feadback .section:hover {
+    transform: translateY(-7px); 
+}
+.section i{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color:rgba(203, 212, 19, 0.533);
+}
+.profile{
+    display: block;
+    padding-top: 40px;
+}
+.profile img{
+     width: 30%;
+}
+.name{
+    display: block;
+    line-height: 25px;
+}
+.name h3{
+    color: #BD58AE;
+}
+.section .text2{
+        padding-top: 15px;
+}
+.section .text3{
+    padding-top: 15px;
+}
+/* feadback*/
+
+
+
+
+
+.footer-section{
+    display: flex;
+    text-align:center ;
+    justify-content: center; 
+    align-items: center; 
+    gap:150px;  
+    background-color: #f1efef;
+}
+
+.imgages img{
+    width: 200px;
+}
+.help{
+    line-height: 40px;
+    color: #000;
+    
+}
+.contactUS{
+    line-height: 40px;
+    color: #000;
+}
+.PROGRAMS{
+    line-height: 35px;
+    color: #000;
+}
