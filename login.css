@@ -1,0 +1,379 @@
+
+/* General */
+  
+body{
+    justify-content: center;
+    display:block;
+    margin: 0px;
+}
+
+* {
+    
+    list-style-type: none;
+    text-decoration: none;   
+  }
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+  }
+
+.padding-top{
+    padding-top: 50px; 
+    padding-bottom: 50px; 
+}
+
+
+/* Nav_Bar */
+.background_section{
+    background: url("asseet/image/about_background.png");
+    width: 100%;
+    height: 76px;
+    background-size: cover;
+    background-position: center;
+}
+.Nav_Bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+}
+.logo img{
+    width: 200px;
+}
+.menu ul{
+    display: flex;
+    gap: 60px;
+}
+.menu ul li a{
+    font-size: 22px;
+    color: black;
+    position: relative; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.menu ul li a:hover {
+    color: #BD58AE; 
+    transform: translateY(-5px); 
+}
+.menu ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #BD58AE; 
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.menu ul li a:hover::before {
+    visibility: visible;
+    width: 100%; 
+}
+.Register ul{
+    display: flex;
+    gap: 15px;
+}
+.Register ul li a{
+    font-size: 20px;
+    color: black;
+    transition: color 0.3s ease;
+}
+.Register ul li a:hover {
+    color: #BD58AE; 
+}
+.menu li i{
+    margin-left: 10px;
+}
+
+
+/* القائمة الرئيسية */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px; /* تقليل المسافة بين العناصر */
+}
+
+.menu ul li {
+    position: relative; /* ضروري لعرض القائمة المنسدلة بشكل صحيح */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #BD58AE; /* تغيير لون النص عند التمرير */
+}
+
+
+/* dashboard*/
+.menu .dropdown ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    gap: 1px; 
+}
+
+.menu .dropdown ul li {
+    position: relative; 
+}
+
+.menu .dropdown ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #333;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.menu .dropdown ul li a:hover {
+    color: #000000;
+}
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; /* تظهر أسفل عنصر القائمة */
+    background-color: #eceaea; 
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* لضمان الظهور فوق العناصر الأخرى */
+    width: 160px; 
+    flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+    opacity: 0; /* بدايةً، تكون غير مرئية */
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 1px; /* تقليل المسافة الداخلية */
+    display: block;
+    font-size: 8px; /* تصغير حجم الكتابة */
+    transition: color 0.3s;
+}
+
+/* إظهار القائمة المنسدلة عند التمرير */
+.dropdown:hover .dropdown-menu {
+    display: flex; 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+
+/* To split a screen */
+.main{
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px auto;
+    height: 700px;
+    
+}
+
+/* Left side screen*/
+.left{
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+.left img{
+    position: absolute;
+    top: 400px;
+    margin-left: 80px;
+    display: flex;
+    width: 300px;
+    height: 250px;
+    margin-top: 70px;
+    
+
+}
+.login{
+    position: absolute;
+    right: 0px;
+    top: 150px;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px 0px 0px 50px;
+    border-style: none;
+    background-color:white;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);/* زيادة وضوح الشادو */
+    
+    
+}
+.singup{
+    position: absolute;
+    right: 0px;
+    top: 190px;
+    text-align: center;
+    padding: 10px 15px 10px 20px;
+    border-radius: 50px 0px 0px 50px;
+    border-style: none;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+/* Right side screen*/
+.back-right{
+    background-color: rgb(255, 255, 255);
+    }
+
+
+/* Login & singup */
+.right,.right-Singup{
+text-align: center;
+justify-content: center;
+width: 400px;
+background-color: white;
+padding:1px 50px 50px 50px;
+border-radius: 10px;
+margin-top: 100px;
+margin-bottom: 100px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); 
+
+}
+
+.right-Singup{
+    text-align: center;
+    justify-content: center;
+    width: 400px;
+    background-color: white;
+    padding:1px 50px 50px 50px;
+    border-radius: 10px;
+    margin-top: 100px;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.st11{
+    font-size: 40px;
+    color: black;
+    font-family: 'Dancing Script';
+    text-align: center;
+    text-shadow:1px 1px 2px black;
+        
+}
+
+.st02{
+padding: 12px 15px;
+font-size: 12px;
+border-radius: 10px;
+font-family:Arial, Helvetica, sans-serif;
+background-color: #fff;
+border: 1px solid black;
+margin: 8px 0px;
+padding-left: 35px;
+direction:ltr;
+width: 80%;
+
+}
+
+.username{
+    position: relative;
+}
+.username p{
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    font-size: 12px;
+}
+.password{
+    position: relative;
+}
+.password p{
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    font-size:12px;
+}
+.forget{
+    display: flex;
+    justify-content: space-between;
+}
+.forget p{
+    font-size: 12px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.forget p a{
+    color: rgb(14, 13, 13);
+}
+.forget a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.forget button{
+    border-radius: 50px;
+    padding: 0px 20px;
+    border-style: none;
+    margin-right: 15px;
+    background-color: #a962a1;
+    
+}
+.register button{
+    border-radius: 50px;
+    padding: 10px 50px;
+    border-style: none;
+    margin-right: 15px;
+    background-color: #a962a1;
+}
+
+.register button a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #a962a1;
+}
+
+
+/* footer */
+
+.footer-section{
+    display: flex;
+    text-align:center ;
+    justify-content: center; 
+    align-items: center; 
+    gap:150px;  
+    background-color: #f1efef;
+    
+    padding: 0;
+    margin: 0;
+    
+}
+
+.imgages img{
+    width: 200px;
+}
+.help{
+    line-height: 40px;
+    color: #000;
+    
+}
+.contactUS{
+    line-height: 40px;
+    color: #000;
+}
+.PROGRAMS{
+    line-height: 35px;
+    color: #000;
+}
+.footer-section a {
+    color: #000; /* اللون الأسود */
+    text-decoration: none; /* إزالة التسطير */
+}

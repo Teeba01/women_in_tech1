@@ -1,0 +1,486 @@
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+.padding-top{
+    padding-top: 100px; 
+    padding-bottom: 50px; 
+}
+/* General */
+
+
+/*******************************/
+/********* about_page CSS *********/
+/*******************************/
+/* Nav_Bar */
+.background_section{
+    background: url('./images/about_background.png');
+    width: 100%;
+    height: 76px;
+    background-size: cover;
+    background-position: center;
+}
+.Nav_Bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+}
+.logo img{
+    width: 200px;
+}
+.menu ul{
+    display: flex;
+    gap: 60px;
+}
+.menu ul li a{
+    font-size: 22px;
+    color: black;
+    position: relative; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.menu ul li a:hover {
+    color: #BD58AE; 
+    transform: translateY(-5px); 
+}
+.menu ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #BD58AE; 
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.menu ul li a:hover::before {
+    visibility: visible;
+    width: 100%; 
+}
+.Register ul{
+    display: flex;
+    gap: 15px;
+}
+.Register ul li a{
+    font-size: 20px;
+    color: black;
+    transition: color 0.3s ease;
+}
+.Register ul li a:hover {
+    color: #BD58AE; 
+}
+.menu li i{
+    margin-left: 10px;
+}
+
+
+/* القائمة الرئيسية */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px; /* تقليل المسافة بين العناصر */
+}
+
+.menu ul li {
+    position: relative; /* ضروري لعرض القائمة المنسدلة بشكل صحيح */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #BD58AE; /* تغيير لون النص عند التمرير */
+}
+
+
+
+
+/* dashboard*/
+.menu .dropdown ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    gap: 1px; 
+}
+
+.menu .dropdown ul li {
+    position: relative; 
+}
+
+.menu .dropdown ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #333;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.menu .dropdown ul li a:hover {
+    color: #000000;
+}
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; /* تظهر أسفل عنصر القائمة */
+    background-color: #eceaea; 
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* لضمان الظهور فوق العناصر الأخرى */
+    width: 160px; 
+    flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+    opacity: 0; /* بدايةً، تكون غير مرئية */
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 1px; /* تقليل المسافة الداخلية */
+    display: block;
+    font-size: 8px; /* تصغير حجم الكتابة */
+    transition: color 0.3s;
+}
+
+/* إظهار القائمة المنسدلة عند التمرير */
+.dropdown:hover .dropdown-menu {
+    display: flex; 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+/* dashboard*/
+
+
+
+
+/* about us */
+/* About Us Section */
+.about-us {
+    padding: 60px 40px;
+    background-color: #fff;
+    position: relative;
+    font-weight: bold;   
+}
+
+.about-content {
+    display: flex;
+    
+   
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;   
+}
+
+.text-container {
+    position: relative;
+    padding: 20px;
+    height: 290px;
+    max-width: 40%;
+    width: 100%;
+    border-radius: 50px; 
+    padding-right: 500px;      
+    
+}
+
+.text-h2 {
+    background-image: url("images/back.png");
+    background-position: center;
+    color: rgb(161, 70, 148);
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 30px;
+    width: 350px;
+    font-size: 25px;
+    margin: 0 auto;
+    margin-left: 30px;
+}
+
+
+.description-container {
+    background-color: #f3e5f5; 
+    padding: 20px;
+    border-radius: 50px;
+    width: 420px;
+    margin: 30px auto ;
+    text-align: center;
+    font-size: 16px;
+    line-height: 2;
+    
+}
+
+.description-container p {
+    text-align: center;
+    margin: 0; 
+}
+
+.video-container {
+    position: relative;
+    background-image: url("images/back.png");
+    border-radius: 47px;
+    background-position: bottom;
+    background-size: cover;
+    width: 550px;
+    height: 300px;
+    padding-right: 200px;
+    
+}
+
+/* Mission and Vision Section */
+.mission-vision {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 50px 30px;
+    background-color: #fff;
+    
+}
+
+.mission, .vision {
+    width: 35%;
+    padding: 20px;
+    text-align: center;  
+    
+}
+
+.mission-h2, .vision-h2 {
+    background-image: url("images/back.png");
+    background-position: center;
+    color: rgb(161, 70, 148);;
+    border-radius: 20px; 
+    padding: 30px 30px;       
+    border-radius: 50px;       
+
+    max-width: 400px;        
+    margin: 0 auto 30px auto; /* Add margin-bottom to create space between the title and description */
+}
+
+.mission-description {
+    background-color: #f3e5f5; 
+    font-weight: bold;
+    padding: 30px 20px;       
+    border-radius: 70px;       
+    max-width: 400px;        
+    margin: 0 auto;
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+    
+.vision-description {
+    background-color: #f3e5f5; 
+    font-weight: bold;
+    padding: 20px 20px;       
+    border-radius: 70px;       
+    max-width: 400px;        
+    margin: 0 auto; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+    
+.mission-description:hover, .vision-description:hover {
+    transform: translateY(-5px); 
+    
+}    
+
+
+.mission-description p, .vision-description p {
+    margin: 50px;
+    flex: 1; /* Allow text to fill the space evenly */
+}
+
+.mission, .vision {
+    width: 35%;
+    padding: 20px;
+    text-align: center;  
+    transition: transform 0.3s, box-shadow 0.3s; 
+    border-radius: 20%;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Purpose Section */
+
+.purpose {
+    padding: 60px 40px;
+    text-align: center;  
+}
+
+.purpose h2 {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.purpose-text {
+    background-image: url("images/back.png");
+    background-position:center;
+    padding: 60px 70px;       
+    border-radius: 70px;       
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 800px;        
+    margin: 0 auto;   
+    transition: transform 0.3s ease, box-shadow 0.3s ease;       
+}
+
+.purpose-text:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.purpose-text p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Expected Outcomes Section */
+.expected-outcomes {
+    padding: 40px; 
+    background-color: #f3e5f5;
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 1000px; /* Adjusted width for a larger area */
+    margin: 70px auto; /* Centered with margin from top and bottom */
+    text-align: center; 
+    
+}
+
+.outcomes-title {
+    font-size: 26px; 
+    color: black; 
+    margin-bottom: 50px; 
+    
+}
+
+.outcomes-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    gap: 20px; 
+}
+
+.outcome {
+    background-color: #fff;
+    padding: 20px; 
+    border-radius: 15px; 
+    text-align: center;
+    width: 45%; 
+    margin-bottom: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.outcome img {
+    width: 65px; 
+    height: 65px; 
+    margin-bottom: 15px; 
+    
+}
+
+.outcome h3 {
+    font-size: 20px; 
+    color: #A74691; 
+}
+
+/* Transition for text-container and description-container */
+.text-container, .description-container {
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.text-container:hover, .description-container:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    
+}
+
+/* Transition for mission and vision sections */
+.mission-h2, .vision-h2 {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color changes */
+}
+
+.mission-h2:hover, .vision-h2:hover {
+    background-color: #e1bee7; /* Slight change in background color on hover */
+    color: #7b1fa2; /* Change text color on hover */
+}
+
+/* Transition for outcome boxes */
+.outcome {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.outcome:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Transition for footer images */
+.imgages img {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for scaling and opacity */
+}
+
+.imgages img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    opacity: 0.8; /* Lower opacity on hover */
+}
+
+/* Ken Burns effect for video background */
+@keyframes kenburns {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    100% {
+        transform: scale(1.1) translate(10px, 10px); /* Slight zoom */
+    }
+}
+
+.video-container {
+    animation: kenburns 10s ease-in-out infinite alternate; /* Continuous zoom effect */
+}
+
+.footer-section{
+    display: flex;
+    text-align:center ;
+    justify-content: center; 
+    align-items: center; 
+    gap:150px;  
+    background-color: #f1efef;
+    padding: 40px;
+    
+}
+
+.imgages img{
+    width: 200px;
+}
+.help{
+    line-height: 40px;
+    color: #000;
+    
+}
+.contactUS{
+    line-height: 40px;
+    color: #000;
+}
+.PROGRAMS{
+    line-height: 35px;
+    color: #000;
+}
+.footer-section a {
+    color: #000; /* اللون الأسود */
+    text-decoration: none; /* إزالة التسطير */
+}
